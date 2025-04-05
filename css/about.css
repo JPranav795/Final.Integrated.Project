@@ -218,11 +218,24 @@ header {
 }
 
 /* Footer */
-footer {
-    background: #4b0082;
+footer.full-width-grid-con {
+    background: #4b0082; /* Indigo purple */
     color: #d8bfd8;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .grid-con {
+    display: block; /* Remove grid influence */
+    width: 100%;
     text-align: center;
-    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    width: 100%;
 }
 
 /* Tablet and Desktop */
