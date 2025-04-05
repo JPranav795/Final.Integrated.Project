@@ -10,25 +10,23 @@ body {
 /* Header */
 header {
     background: rgba(74, 20, 140, 0.9); /* Deep purple */
-    padding: 16px;
+    padding: 20px;
+    position: sticky;
     top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo img {
     height: 40px;
     display: block;
-    margin: 0 auto;
-    transition: transform 0.3s;
-}
-
-.logo img:hover {
-    transform: rotate(10deg); /* Interactive logo spin */
+    margin: 0 auto; /* Centered on mobile */
 }
 
 .hamburger {
     background: none;
     border: none;
-    color: #d8bfd8; /* Light purple */
+    color: #d8bfd8;
     font-size: 24px;
     cursor: pointer;
     display: block;
@@ -57,10 +55,37 @@ header {
 }
 
 .nav-list a:hover {
-    color: #ff00ff; /* Bright magenta */
-    transform: scale(1.1); /* Interactive scale */
+    color: #ff00ff;
+    transform: scale(1.1);
 }
 
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Logo left, nav centered */
+        padding: 20px;
+    }
+
+    .logo img {
+        margin: 0; /* Left-aligned */
+        height: 50px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1; /* Takes up remaining space to center */
+    }
+
+    .nav-list li {
+        margin: 0 15px; /* Horizontal spacing */
+    }
+}
 /* Hero */
 .hero {
     padding: 32px 16px;
@@ -205,19 +230,29 @@ footer p {
 
 /* Tablet and Desktop */
 @media (min-width: 768px) {
-    .hamburger {
+    header.full-width-grid-con {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background: rgba(74, 20, 140, 0.9); /* Ensure background spans */
+    }
+
+    header .grid-con {
+        display: none; /* Hide grid container */
+    }
+
+    .logo, .hamburger {
         display: none;
     }
 
     .nav-list {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 24px;
     }
-
-    .logo img {
-        height: 50px;
-    }
+}
 
     .hero {
         padding: 48px 16px;
@@ -238,4 +273,3 @@ footer p {
     .reviews img {
         max-width: 150px;
     }
-}
