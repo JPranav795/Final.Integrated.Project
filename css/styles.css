@@ -1,0 +1,228 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: url('purple-bg.jpg') no-repeat center/cover fixed; /* Purple-themed background */
+    color: #fff;
+    cursor: url('your-cursor.png'), auto;
+}
+
+/* Header */
+header {
+    background: rgba(74, 20, 140, 0.9); /* Deep purple */
+    padding: 16px;
+    top: 0;
+}
+
+.logo img {
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: rotate(10deg); /* Interactive logo spin */
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: #d8bfd8; /* Light purple */
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav-list {
+    list-style: none;
+    display: none;
+    text-align: center;
+}
+
+.nav-list.active {
+    display: block;
+}
+
+.nav-list li {
+    padding: 8px 0;
+}
+
+.nav-list a {
+    color: #d8bfd8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-list a:hover {
+    color: #ff00ff; /* Bright magenta */
+    transform: scale(1.1); /* Interactive scale */
+}
+
+/* Hero */
+.hero {
+    padding: 32px 16px;
+    text-align: center;
+    background: rgba(106, 90, 205, 0.85); /* Slate purple */
+    animation: fadeIn 2s ease;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 16px;
+    animation: bounceIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 24px;
+    margin: 8px 0;
+    color: #e6e6fa; /* Lavender */
+}
+
+.hero p {
+    color: #d8bfd8;
+}
+
+/* Buttons */
+.btn {
+    padding: 8px 16px;
+    background: #9370db; /* Medium purple */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #ff00ff; /* Magenta hover */
+    transform: scale(1.1);
+}
+
+/* Sections */
+.features, .products, .history, .reviews, .signup {
+    padding: 24px 16px;
+    margin: 8px 0;
+}
+
+.features {
+    background: rgba(147, 112, 219, 0.9); /* Medium purple */
+}
+
+.features img, .products img, .history img, .reviews img, .signup img {
+    width: 100%;
+    max-width: 250px;
+    margin: 16px auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.features img:hover, .products img:hover, .history img:hover, .reviews img:hover, .signup img:hover {
+    transform: rotate(5deg); /* Interactive image tilt */
+}
+
+.products {
+    background: rgba(186, 85, 211, 0.9); /* Orchid purple */
+}
+
+.history {
+    background: rgba(106, 90, 205, 0.9);
+}
+
+.reviews {
+    background: rgba(147, 112, 219, 0.9);
+}
+
+.reviews img {
+    max-width: 120px;
+    border-radius: 50%;
+}
+
+.signup {
+    background: rgba(74, 20, 140, 0.9);
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.products img {
+    animation: bounceIn 1s ease;
+}
+
+.spin-btn {
+    animation: spin 2s infinite linear;
+}
+
+.pulse-btn {
+    animation: pulse 2s infinite;
+}
+
+/* Footer */
+footer {
+    background: #4b0082; /* Indigo purple */
+    color: #d8bfd8;
+    text-align: center;
+    padding: 16px;
+}
+
+/* Tablet and Desktop */
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .hero {
+        padding: 48px 16px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero img {
+        max-width: 600px;
+    }
+
+    .features img, .products img, .history img, .signup img {
+        max-width: 350px;
+    }
+
+    .reviews img {
+        max-width: 150px;
+    }
+}
