@@ -4,9 +4,10 @@ body {
     line-height: 1.6;
     background: url('purple-bg.jpg') no-repeat center/cover fixed; /* Purple-themed background */
     color: #fff;
-    cursor: url('your-cursor.png'), auto;
-}
-
+        cursor: url('../images/cursor.png'), auto;
+    
+    }
+    
 /* Header */
 header {
     background: rgba(74, 20, 140, 0.9); /* Deep purple */
